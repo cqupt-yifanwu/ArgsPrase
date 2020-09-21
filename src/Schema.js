@@ -24,7 +24,7 @@ module.exports = class Schema {
 
         if (!this.schemaList[name]) {
             console.log('该属性不存在')
-            return false
+            throw new Error('属性不存在')
         }
 
         return this.schemaList[name]
@@ -35,8 +35,7 @@ module.exports = class Schema {
         const splitArray = array.trim().split(/\s+/)
         const key = splitArray[0].trim()
         if (!key || !this.getType(key)) {
-            console.log('输入命令有误')
-            return false
+            throw new Error('输入命令有误')
         }
 
         const flagSchema = this.getType(key)
@@ -73,8 +72,8 @@ module.exports = class Schema {
             }
 
             // 处理报错情况
-            console.log('您输入的值类型不属于' + type)
-            return false
+            console.log(`您输入的值类型不属于${type}`)
+            throw new Error(`您输入的值类型不属于${type}`)
         }
 
         return {

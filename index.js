@@ -18,10 +18,15 @@ const main = () => {
 
     console.log(commands)
 
-    const args = new Args(commands, schema)
+    let args 
+    try {
+        args = new Args(commands, schema)
 
-    while ((query = (readline.question('请输入要查询的命令，退出请输入exit： '))) !== 'exit') {
-        args.getValueOf(query)
+        while ((query = (readline.question('请输入要查询的命令，退出请输入exit： '))) !== 'exit') {
+            args.getValueOf(query)
+        }
+    } catch (e) {
+        console.log(e)
     }
 }
 

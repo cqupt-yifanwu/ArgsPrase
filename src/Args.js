@@ -9,7 +9,7 @@ module.exports = class Args {
     commandSplit() {
         if (!this.originCommands) {
             console.log('请输入命令')
-            return false
+            throw new Error('没有输入命令')
         }
 
         const splitArray = this.originCommands.trim().split('-').splice(1)
@@ -19,7 +19,7 @@ module.exports = class Args {
 
             // 说明用户输入不对
             if (!value) {
-                return false
+                throw new Error('输入有误')
             }
 
             this.finnalArgsMap[value.key] = value.valueList
@@ -33,16 +33,15 @@ module.exports = class Args {
 
         if (!this.schemaInstance.getType(type)) {
             console.log('您查询的命令不存在')
-            return false
+            throw new Error("您查询的命令不在")
         }
 
         if (!this.finnalArgsMap[type]) {
             console.log('抱歉，查询不到该命令')
-            return false
+            throw new Error("抱歉，查询不到该命令")
         }
 
         console.log('type: ' +type + ', value: ' + this.finnalArgsMap[type].join(','))
         return this.finnalArgsMap[type]
     }
-
 }
