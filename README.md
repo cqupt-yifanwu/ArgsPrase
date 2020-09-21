@@ -2,8 +2,8 @@
 命令行解析工具
 
 # setp
-## 1. npm i
-## 2. node index
+1. npm i
+2. node index
 
 # result
 ```
