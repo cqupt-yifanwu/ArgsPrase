@@ -1,4 +1,4 @@
-export default class Args {
+module.exports = class Args {
     constructor (argsText, schema) {
         this.originCommands = argsText
         this.finnalArgsMap = {} // 经过scheme处理过的结构

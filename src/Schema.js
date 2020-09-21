@@ -1,4 +1,4 @@
-export default class Schema {
+module.exports = class Schema {
     constructor () {
         this.schemaList = {}
     }

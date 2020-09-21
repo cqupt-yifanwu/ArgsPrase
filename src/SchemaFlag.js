@@ -1,4 +1,4 @@
-export default class SchemaFlag {
+module.exports = class SchemaFlag {
     constructor (type, defaultValue) {
         this.type = type
         this.default = defaultValue
