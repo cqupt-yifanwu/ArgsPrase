@@ -1,0 +1,24 @@
+{
+  "name": "ArgsPrase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cqupt-yifanwu/ArgsPrase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cqupt-yifanwu/ArgsPrase/issues"
+  },
+  "homepage": "https://github.com/cqupt-yifanwu/ArgsPrase#readme",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

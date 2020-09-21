@@ -2,7 +2,7 @@ import Schema from './Schema'
 import SchemaFlag from './SchemaFlag'
 import Args from './Args'
 
-const main = (commands) => {
+const main = () => {
     const schema = new Schema()
 
     const lFlag = new SchemaFlag('Boolean', false)
